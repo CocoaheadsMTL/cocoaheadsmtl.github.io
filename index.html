@@ -5,19 +5,28 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    {% for event in site.past_events reversed %}
+    	<div>
+        <span class="post-meta">{{ event.title }}</span>
+        {% if event.speakers %}
+        	<ul>
+					{% for speaker in event.speakers %}
+						<li>
+						  {% if speaker.twitter %}
+							  <a href="http://twitter.com/{{speaker.twitter}}" class="speaker-name">{{speaker.name}}</a>
+							{% else %}
+							  <span class="speaker-name">{{speaker.name}}</span>
+              {% endif %}
+							<span class="talk-title">{{speaker.title}}</span>
+						</li>
+					{% endfor %}
+        	</ul>
+				{% else %}
+					<br/>
+					<p class="post-meta">{{event.description}}</p>
+				{% endif %}
+    	</div>
     {% endfor %}
-  </ul>
-
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
