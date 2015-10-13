@@ -15,3 +15,4 @@ markdown: kramdown
 #Collections
 collections:
 - past_events
+- next_events

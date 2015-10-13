@@ -3,7 +3,38 @@ layout: default
 ---
 
 <div class="next">
-  <h2>Next Event</h2>
+  <h2>Next Events</h2>
+  {% for event in site.next_events %}
+  <div class="date">{{ event.title }}</div>
+  <div class="venue">
+    <div class="name">{{ event.venue_name }}</div>
+    <div class="address">
+      <a href="{{ event.venue_address_map_url }}">{{ event.venue_address }}</a>
+    </div>
+  </div>
+  <div class="talks-container">
+    {% for speaker in event.speakers %}
+    <div class="talks clear">
+      <div class="speaker">
+        {% if speaker.twitter %}
+        <a href="http://twitter.com/{{ speaker.twitter }}" class="speaker-name">{{ speaker.name }}</a>
+        {% else %}
+        <span class="speaker-name">{{ speaker.name }}</span>
+        {% endif %}
+      </div>
+      <div class="talk-title">
+			  {{ speaker.title }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if event.meetup_url %}
+  <div class="clear rsvp">
+    <a href="{{ event.meetup_url }}" data-event="{{ event.meetup_id }}" class="mu-rsvp-btn">RSVP</a>
+    via Meetup
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 <hr>
 <div class="past">
@@ -11,10 +42,10 @@ layout: default
   {% for event in site.past_events reversed %}
   <div class="talks clear">
     <h3>{{ event.title }}</h3>
-    <div style="margin-left:35px; margin-top:10px">
+    <div class="talks-container">
 		  {% for speaker in event.speakers %}
       <div class="clear">
-        <div style="float:left; max-width:200px; min-height:30px; padding-right:3px">
+        <div class="speaker">
 		      {% if speaker.twitter %}
           <a href="http://twitter.com/{{ speaker.twitter }}" class="speaker-name">{{ speaker.name }}</a>
           {% else %}
@@ -22,13 +53,13 @@ layout: default
           {% endif %}
         </div>
         <div class="talk-title">
-  				{{ speaker.title }}
+  				<span>{{ speaker.title }}</span>
         </div>
       </div>
       {% endfor %}
     </div>
     {% if event.meetup_url %}
-    <div class="clear" style="margin-bottom:15px">
+    <div class="clear rsvp">
       <a href="{{ event.meetup_url }}" data-event="{{ event.meetup_id }}" class="mu-rsvp-btn">RSVP</a>
       via Meetup
     </div>
