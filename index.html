@@ -2,31 +2,37 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-    {% for event in site.past_events reversed %}
-    	<div>
-        <span class="post-meta">{{ event.title }}</span>
-        {% if event.speakers %}
-        	<ul>
-					{% for speaker in event.speakers %}
-						<li>
-						  {% if speaker.twitter %}
-							  <a href="http://twitter.com/{{speaker.twitter}}" class="speaker-name">{{speaker.name}}</a>
-							{% else %}
-							  <span class="speaker-name">{{speaker.name}}</span>
-              {% endif %}
-							<span class="talk-title">{{speaker.title}}</span>
-						</li>
-					{% endfor %}
-        	</ul>
-				{% else %}
-					<br/>
-					<p class="post-meta">{{event.description}}</p>
-				{% endif %}
-    	</div>
-    {% endfor %}
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="next">
+  <h2>Next Event</h2>
+</div>
+<hr>
+<div class="past">
+  <h2>Past Events</h2>
+  {% for event in site.past_events reversed %}
+  <div class="talks clear">
+    <h3>{{ event.title }}</h3>
+    <div style="margin-left:35px; margin-top:10px">
+		  {% for speaker in event.speakers %}
+      <div class="clear">
+        <div style="float:left; max-width:200px; min-height:30px; padding-right:3px">
+		      {% if speaker.twitter %}
+          <a href="http://twitter.com/{{ speaker.twitter }}" class="speaker-name">{{ speaker.name }}</a>
+          {% else %}
+          <span class="speaker-name">{{ speaker.name }}</span>
+          {% endif %}
+        </div>
+        <div class="talk-title">
+  				{{ speaker.title }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if event.meetup_url %}
+    <div class="clear" style="margin-bottom:15px">
+      <a href="{{ event.meetup_url }}" data-event="{{ event.meetup_id }}" class="mu-rsvp-btn">RSVP</a>
+      via Meetup
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
 </div>

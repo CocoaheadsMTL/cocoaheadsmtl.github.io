@@ -1,7 +1,7 @@
 # Site settings
 title: "CocoaHeads Montréal"
 email: your-email@domain.com
-description: "CocoaHeads Montréal brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
+description: "<strong>CocoaHeads Montréal</strong> brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
 "#> # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cocoaheadsmtl.github.io" # the base hostname & protocol for your site
