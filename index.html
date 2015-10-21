@@ -53,7 +53,11 @@ layout: default
           {% endif %}
         </div>
         <div class="talk-title">
+  				{% if speaker.slides_url %}
+  				<span>{{ speaker.title }} (<a href="{{ speaker.slides_url }}">slides</a>)</span>
+  				{% else %}
   				<span>{{ speaker.title }}</span>
+  				{% endif %}
         </div>
       </div>
       {% endfor %}
