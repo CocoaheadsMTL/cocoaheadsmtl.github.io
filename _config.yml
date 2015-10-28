@@ -1,10 +1,10 @@
 # Site settings
 title: "CocoaHeads Montréal"
-email: your-email@domain.com
+email: cocoaheadsmtl@gmail.com
 description: "<strong>CocoaHeads Montréal</strong> brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
 "#> # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://cocoaheadsmtl.github.io" # the base hostname & protocol for your site
+url: "http://cocoaheadsmtl.com" # the base hostname & protocol for your site
 twitter_username: cocoaheadsmtl
 ical_url: "https://www.google.com/calendar/ical/cocoaheadsmtl%40gmail.com/public/basic.ics"
 meetup_group: CocoaHeads-Montreal
