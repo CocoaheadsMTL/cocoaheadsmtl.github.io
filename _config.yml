@@ -6,7 +6,6 @@ description: "<strong>CocoaHeads Montréal</strong> brings together iOS and Mac 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cocoaheadsmtl.com" # the base hostname & protocol for your site
 twitter_username: cocoaheadsmtl
-ical_url: "https://www.google.com/calendar/ical/cocoaheadsmtl%40gmail.com/public/basic.ics"
 meetup_group: CocoaHeads-Montreal
 
 # Build settings
