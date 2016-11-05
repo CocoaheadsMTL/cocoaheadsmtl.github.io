@@ -3,7 +3,9 @@
   <h1>{{ site.description }}</h1>
 	<div id="subscribe">
 		<ul>
+            {% if site.ical_url %}
 			<li class="ical"><a href="{{ site.ical_url }}" title="iCal">iCal</a></li>
+            {% endif %}
 			<li class="twitter"><a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">Twitter</a></li>
 			<li class="meetup"><a href="https://www.meetup.com/{{ site.meetup_group }}" title="Meetup">Meetup</a></li>
 		</ul>
