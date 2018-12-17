@@ -1,0 +1,14 @@
+---
+title:  "November 2018"
+date:   2018-11-15
+meetup_id: "254164255" 
+meetup_url: "https://www.meetup.com/CocoaHeads-Montreal/events/254164255/"
+speakers:
+  - name: "Kyle Ilantzis"
+    title: "Snapshot testing at Motivate"
+    slides_url: "https://cocoaheadsmontreal.s3.amazonaws.com/2018-11-15/iOSSnapshotTesting.pdf"
+  - name: "Vincent Bernier"
+    title: "View Decorator: Exploring Possibilities"
+    twitter: 2000Bernier
+    slides_url: "https://cocoaheadsmontreal.s3.amazonaws.com/2018-11-15/ViewComposition.pdf"
+---
