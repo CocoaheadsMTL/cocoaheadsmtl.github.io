@@ -4,7 +4,7 @@ email: cocoaheadsmtl@gmail.com
 description: "<strong>CocoaHeads Montréal</strong> brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
 "#> # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://cocoaheadsmtl.com" # the base hostname & protocol for your site
+url: "https://cocoaheadsmtl.com" # the base hostname & protocol for your site
 twitter_username: cocoaheadsmtl
 meetup_group: CocoaHeads-Montreal
 
