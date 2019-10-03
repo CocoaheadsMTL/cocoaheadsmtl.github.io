@@ -62,12 +62,6 @@ layout: default
       </div>
       {% endfor %}
     </div>
-    {% if event.meetup_url %}
-    <div class="clear rsvp">
-      <a href="{{ event.meetup_url }}" data-event="{{ event.meetup_id }}" class="mu-rsvp-btn">RSVP</a>
-      via Meetup
-    </div>
-    {% endif %}
   </div>
   {% endfor %}
 </div>
